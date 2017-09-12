@@ -1,0 +1,27 @@
+{
+  "name": "giorgio",
+  "version": "1.0.0",
+  "description": "A simple CLI for george",
+  "main": "index.js",
+  "scripts": {
+    "test": "./index.js test.grg"
+  },
+  "keywords": [
+    "University of Waterloo",
+    "Geese",
+    "SE212",
+    "george",
+    ".grg",
+    "cli"
+  ],
+  "author": "Philip Scott",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "request": "^2.81.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ScottyFillups/tumult.git"
+  }
+}
