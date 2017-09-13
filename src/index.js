@@ -6,6 +6,10 @@ const url = 'https://www.student.cs.uwaterloo.ca/~se212/george/ask-george/cgi-bi
 
 module.exports = function (file) {
   fs.readFileAsync(file, 'utf8')
+    .catch((err) => {
+      console.error('ERROR: Unable to read file. Double-check your path.')
+      return Promise.reject(err)
+    })
     .then((contents) => {
       return request.postAsync({
         uri: url,
@@ -14,12 +18,13 @@ module.exports = function (file) {
         },
         body: contents
       })
+      .catch((err) => {
+        console.error('ERROR: Failed to connect to george. Please ensure you have internet connectivity.')
+        return Promise.reject(err)
+      })
     })
     .then((res) => {
       console.log(res.body)
     })
-    .catch((err) => {
-      console.log(err)
-      next(err)
-    })
+    .catch((err) => {})
 }
