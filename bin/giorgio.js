@@ -2,7 +2,7 @@
 
 const chokidar = require('chokidar')
 const argv = require('yargs').argv
-const lib = require('../src/index')
+const lib = require('../lib/index')
 const file = process.argv[2]
 
 if (!file) {
