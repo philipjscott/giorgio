@@ -2,7 +2,7 @@
 #a 01
 
 #q 01
-
+%h
 #check PROP
 
 a => b

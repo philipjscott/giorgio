@@ -13,3 +13,7 @@ Or,
 ### Usage
 
 `$ giorgio myfile.grg`
+
+You can also `watch` the file, to get instant feed-back the moment you save your changes:
+
+`$ giorgio myfile.grg --watch`
