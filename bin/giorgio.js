@@ -1,8 +1,8 @@
 #! /usr/bin/env node
 
-const chokidar = require('chokidar')
 const argv = require('yargs').argv
 const lib = require('../lib/index')
+const chokidar = require('chokidar')
 const file = process.argv[2]
 
 if (!file) {
